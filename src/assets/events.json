@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Music Festival",
+        "location": "Central Park",
+        "startDate": "2023-05-20T00:00:00.000Z",
+        "endDate": "2023-05-20T00:00:00.000Z",
+        "points": 10,
+        "organizer": "ABC Productions"
+    },
+    {
+        "id": 2,
+        "name": "Tech Conference",
+        "location": "Moscone Center",
+        "startDate": "2023-06-15T00:00:00.000Z",
+        "endDate": "2023-06-16T00:00:00.000Z",
+        "points": 20,
+        "organizer": "XYZ Corp"
+    },
+    {
+        "id": 3,
+        "name": "Charity Gala",
+        "location": "The Ritz-Carlton",
+        "startDate": "2023-07-01T00:00:00.000Z",
+        "endDate": "2023-07-01T00:00:00.000Z",
+        "points": 15,
+        "organizer": "Charity Foundation"
+    },
+    {
+        "id": 4,
+        "name": "Food Festival",
+        "location": "Golden Gate Park",
+        "startDate": "2023-08-10T00:00:00.000Z",
+        "endDate": "2023-08-12T00:00:00.000Z",
+        "points": 10,
+        "organizer": "Foodie Inc"
+    },
+    {
+        "id": 5,
+        "name": "Sports Championship",
+        "location": "Staples Center",
+        "startDate": "2023-09-30T00:00:00.000Z",
+        "endDate": "2023-09-30T00:00:00.000Z",
+        "points": 25,
+        "organizer": "Sports Association"
+    }
+]

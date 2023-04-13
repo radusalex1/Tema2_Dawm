@@ -1,0 +1,57 @@
+<div class="modal">
+<form nz-form [nzLayout]="'inline'" [formGroup]="editEventForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <label>Name</label>
+          <input formControlName="name" nz-input placeholder="Name" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+          <nz-input-group>
+            <label>Points</label>
+            <input formControlName="points" nz-input placeholder="Points" />
+          </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+          <nz-input-group>
+            <label>Location</label>
+            <input formControlName="location" nz-input placeholder="Location" />
+          </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <nz-input-group>
+                <label>Organizer</label>
+                <input formControlName="organizer" nz-input placeholder="Organizer" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+          <nz-input-group>
+            <label>Start Date</label>
+            <input type="date" formControlName="startDate" nz-input placeholder="Start-Date" />
+          </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+          <nz-input-group>
+            <label>End Date</label>
+            <input type="date" formControlName="endDate" nz-input placeholder="End-Date" />
+          </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+          <button nz-button nzType="primary">Confirm edit</button>
+        </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>
