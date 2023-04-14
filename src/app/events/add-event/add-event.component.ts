@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
+import { CustomValidator } from '../validators/custom-date-validator';
 
 @Component({
   selector: 'app-add-event',
@@ -23,7 +24,7 @@ export class AddEventComponent {
       location:['',[Validators.required]],
       name:['',[Validators.required]],
       organizer:['',[Validators.required]],
-      points:['',[Validators.required]]
+      points:['',[Validators.required,CustomValidator.pointsValidator]]
     })
   }
 

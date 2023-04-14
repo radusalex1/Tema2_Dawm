@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
 import { IEvent } from '../../interfaces/event';
-import { CustomDateValidator } from '../validators/custom-date-validator';
+import { CustomValidator } from '../validators/custom-date-validator';
 
 @Component({
   selector: 'app-edit-event',
@@ -29,7 +29,7 @@ export class EditEventComponent {
       location:[this.eventToEdit.location,[Validators.required]],
       name:[this.eventToEdit.name,[Validators.required]],
       organizer:[this.eventToEdit.organizer.email,[Validators.required]],
-      points:[this.eventToEdit.points,[Validators.required]]
+      points:[this.eventToEdit.points,[Validators.required,CustomValidator.pointsValidator]]
       })
   }
 

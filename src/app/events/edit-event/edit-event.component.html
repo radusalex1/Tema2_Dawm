@@ -13,8 +13,9 @@
         <nz-form-control>
           <nz-input-group>
             <label>Points</label>
-            <input formControlName="points" nz-input placeholder="Points" />
+            <input type="number" formControlName="points" nz-input placeholder="Points" />
             <label *ngIf="points?.errors?.['required']"> Required</label>
+            <label *ngIf="points?.errors?.['minPoints']"> Minimum is 1</label>
           </nz-input-group>
         </nz-form-control>
     </nz-form-item>
@@ -33,7 +34,6 @@
                 <label>Organizer</label>
                 <input formControlName="organizer" nz-input placeholder="Organizer" />
                 <label *ngIf="organizer?.errors?.['required']"> email Required</label>
-
             </nz-input-group>
         </nz-form-control>
     </nz-form-item>

@@ -1,17 +1,19 @@
 import { AbstractControl, FormControl, FormGroup } from "@angular/forms";
 
-export class CustomDateValidator{
+export class CustomValidator{
     static DatesValidators(control:FormGroup) {
         debugger
         const today = new Date();
         const startDate = control.get('startDate')?.value;
         const endDate = control.get('endDate')?.value;
-        // if (startDate > endDate) {
-        //   return {'startDateGreaterThanEndDate': true};
-        // } else if (startDate < today || endDate < today) {
-        //   return {'dateInPast': true};
-        // } else {
-        //   return null;
-        // }
+    }
+    static pointsValidator(controlForm:FormControl){
+        console.log(controlForm)
+        if(controlForm.value<0){
+            return {
+                minPoints:true
+            }
+        }
+        return null
     }
 }

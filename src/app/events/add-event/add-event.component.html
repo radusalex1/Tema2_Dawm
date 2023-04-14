@@ -12,7 +12,8 @@
             <nz-form-control>
               <nz-input-group>
                 <input type="number" formControlName="points" nz-input placeholder="Points" />
-                <label *ngIf="points?.errors?.['required']">Points Required</label>
+                <label *ngIf="points?.errors?.['required']"> Required</label>
+                <label *ngIf="points?.errors?.['minPoints']"> Minimum is 1</label>
               </nz-input-group>
             </nz-form-control>
         </nz-form-item>
