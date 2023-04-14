@@ -17,6 +17,7 @@ export class MainPageComponent {
   constructor(private eventsService:EventsService,private modal: NzModalService){ }
 
   ngOnInit(){
+    debugger;
     this.eventsService.get_events().subscribe((res)=>{
       this.events=res
     })

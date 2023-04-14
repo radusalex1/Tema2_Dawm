@@ -1,10 +1,11 @@
 <div class="modal">
-<form nz-form [nzLayout]="'inline'" [formGroup]="editEventForm" (ngSubmit)="submitForm()">
+<form nz-form [nzLayout]="'vertical'" [formGroup]="editEventForm" (ngSubmit)="submitForm()">
     <nz-form-item>
       <nz-form-control>
         <nz-input-group>
           <label>Name</label>
           <input formControlName="name" nz-input placeholder="Name" />
+          <label *ngIf="name?.errors?.['required']"> Required</label>
         </nz-input-group>
       </nz-form-control>
     </nz-form-item>
@@ -13,6 +14,7 @@
           <nz-input-group>
             <label>Points</label>
             <input formControlName="points" nz-input placeholder="Points" />
+            <label *ngIf="points?.errors?.['required']"> Required</label>
           </nz-input-group>
         </nz-form-control>
     </nz-form-item>
@@ -21,6 +23,7 @@
           <nz-input-group>
             <label>Location</label>
             <input formControlName="location" nz-input placeholder="Location" />
+            <label *ngIf="location?.errors?.['required']"> Required</label>
           </nz-input-group>
         </nz-form-control>
     </nz-form-item>
@@ -29,6 +32,8 @@
             <nz-input-group>
                 <label>Organizer</label>
                 <input formControlName="organizer" nz-input placeholder="Organizer" />
+                <label *ngIf="organizer?.errors?.['required']"> email Required</label>
+
             </nz-input-group>
         </nz-form-control>
     </nz-form-item>
@@ -37,6 +42,7 @@
           <nz-input-group>
             <label>Start Date</label>
             <input type="date" formControlName="startDate" nz-input placeholder="Start-Date" />
+            <label *ngIf="startDate?.errors?.['required']"> Required</label>
           </nz-input-group>
         </nz-form-control>
     </nz-form-item>
@@ -45,6 +51,7 @@
           <nz-input-group>
             <label>End Date</label>
             <input type="date" formControlName="endDate" nz-input placeholder="End-Date" />
+            <label *ngIf="endDate?.errors?.['required']"> Required</label>
           </nz-input-group>
         </nz-form-control>
     </nz-form-item>

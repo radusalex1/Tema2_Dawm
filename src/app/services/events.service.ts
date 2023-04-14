@@ -15,13 +15,13 @@ export class EventsService {
   }
 
   add_event(event:IEvent){
-    event.organizer=1
     event.description="123"
     debugger;
     return this.http.post<any>(this.base_url,event)
   }
 
   edit_event(event:IEvent){
+    event.description="123"
     return this.http.put<any>(this.base_url,event)
   }
 }

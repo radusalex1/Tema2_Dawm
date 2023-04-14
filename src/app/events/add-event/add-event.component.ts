@@ -31,9 +31,34 @@ export class AddEventComponent {
     debugger
     if(this.editEventForm.valid){
       console.log(this.editEventForm.value)
-      this.eventsService.add_event(this.editEventForm.value).subscribe((res)=>{
-        console.log(res)
+      this.eventsService.add_event(this.editEventForm.value).subscribe({
+        next:(res)=>{
+          alert(res.message)
+        }
       })
     }
+  }
+
+  get name(){
+    return this.editEventForm.get("name")
+  }
+  get startDate() {
+    return this.editEventForm.get('startDate');
+  }
+  
+  get endDate() {
+    return this.editEventForm.get('endDate');
+  }
+  
+  get location() {
+    return this.editEventForm.get('location');
+  }
+  
+  get organizer() {
+    return this.editEventForm.get('organizer');
+  }
+  
+  get points() {
+    return this.editEventForm.get('points');
   }
 }
