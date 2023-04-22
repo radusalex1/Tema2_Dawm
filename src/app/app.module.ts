@@ -15,6 +15,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common'
 
 registerLocaleData(en);
 
@@ -32,10 +33,11 @@ registerLocaleData(en);
     BrowserModule,
     NzFormModule,
     NzInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+    { provide: NZ_I18N, useValue: en_US },
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

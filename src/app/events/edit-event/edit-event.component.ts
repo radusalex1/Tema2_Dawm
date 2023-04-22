@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
 import { IEvent } from '../../interfaces/event';
 import { CustomValidator } from '../validators/custom-date-validator';
+import { DatePipe } from '@angular/common'
 
 @Component({
   selector: 'app-edit-event',
@@ -14,7 +15,7 @@ export class EditEventComponent {
 
   editEventForm!: FormGroup;
 
-  constructor(private fb:FormBuilder,private eventsService:EventsService){}
+  constructor(private fb:FormBuilder,private eventsService:EventsService,public datepipe: DatePipe){}
 
   ngOnInit(){
     this.initializeForm()
@@ -22,6 +23,7 @@ export class EditEventComponent {
 
   private initializeForm(){
     console.log(this.eventToEdit)
+    debugger
     this.editEventForm= this.fb.group({
       id:[this.eventToEdit.id,[Validators.required]],
       startDate:[this.eventToEdit.startDate,[Validators.required]],
